@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "LogManager\LogManager.h"
 
 
 namespace Sonic
@@ -6,7 +7,8 @@ namespace Sonic
 
 	void Application::run()
 	{
-		while (true);
+		LogManager::Initialize();
+		SONIC_INFO("Hello from Sonic");
 	}
 
 }
