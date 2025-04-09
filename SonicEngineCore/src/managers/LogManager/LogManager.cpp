@@ -26,7 +26,7 @@ namespace Sonic
 		}
 		else
 		{
-			spdlog::info("Log manager: Succesfully initialized sonicConsoleSink and userConsoleSink");
+			spdlog::info("Log manager: Successfully initialized sonicConsoleSink and userConsoleSink");
 		}
 		
 
@@ -34,15 +34,15 @@ namespace Sonic
 		userLogger = std::make_shared<spdlog::logger>("userLogger", userConsoleSink);
 		if (!sonicLogger)
 		{
-			spdlog::critical("Log manager: Failed to initialize sonicConsoleSink");
+			spdlog::critical("Log manager: Failed to initialize sonicLogger");
 		}
 		if (!userLogger)
 		{
-			spdlog::critical("Log manager: Failed to initialize userConsoleSink");
+			spdlog::critical("Log manager: Failed to initialize userConsoleLogger");
 		}
 		else
 		{
-			spdlog::info("Log manager: Succesfully initialized sonicLogger and userLogger");
+			spdlog::info("Log manager: Successfully initialized sonicLogger and userLogger");
 		}
 	}
 
