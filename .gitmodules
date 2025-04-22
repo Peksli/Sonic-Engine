@@ -1,3 +1,6 @@
 [submodule "SonicEngineCore/src/vendor/spdlog"]
 	path = SonicEngineCore/src/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "SonicEngineCore/src/vendor/glfw"]
+	path = SonicEngineCore/src/vendor/glfw
+	url = https://github.com/glfw/glfw.git

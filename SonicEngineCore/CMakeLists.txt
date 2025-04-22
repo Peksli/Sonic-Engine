@@ -46,5 +46,11 @@ target_include_directories(SonicEngine PUBLIC src
 											  src/managers
 											  src/vendor/spdlog/include)
 
+# spdlog
 add_subdirectory(src/vendor/spdlog)
 target_link_libraries(SonicEngine PUBLIC spdlog)
+
+# glfw
+add_subdirectory(src/vendor/glfw)
+target_link_libraries(SonicEngine PUBLIC glfw)
+target_include_directories(SonicEngine PUBLIC src/vendor/glfw/include)
