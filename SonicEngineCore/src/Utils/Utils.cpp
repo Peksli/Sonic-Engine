@@ -128,10 +128,17 @@ namespace Sonic
 		std::map<std::string, size_t> map_word_count;
 		std::istringstream iss{ s };
 		std::string str;
+		const auto& insert_it_hint{ map_word_count.end() };
 
 		while (iss >> str) {
 			auto no_puncuation_str{ getSubstrWithoutPunctuation(str) };
-			++map_word_count[no_puncuation_str];
+			auto it_element = map_word_count.find(no_puncuation_str);
+			if (it_element != map_word_count.end()) {
+				++(it_element->second);
+			}
+			else {
+				map_word_count.insert(insert_it_hint, { no_puncuation_str, 1 });
+			}
 		}
 
 		std::vector<std::pair<std::string, size_t>> vec_words_count;
@@ -150,9 +157,3 @@ namespace Sonic
 		return vec_words_count;
 	}
 }
-
-
-
-
-
-
