@@ -1,7 +1,10 @@
-#include "Application.h"
-#include "LogManager\LogManager.h"
-#include "EventManager\WindowEvent.h"
-#include "math\Constants.h"
+#include "Application/Application.h"
+#include "Managers/LogManager/LogManager.h"
+#include "Managers/EventManager/WindowEvent.h"
+#include "Math/Constants.h"
+#include "Utils/Utils.h"
+
+#include <string>
 
 
 namespace Sonic
@@ -16,6 +19,9 @@ namespace Sonic
 		SONIC_INFO("PI: {0}", Math::pi);
 		SONIC_INFO("Hello from Sonic");
 		SONIC_INFO("New window width: {0}", w_resize.GetNewWidth());
+
+		std::string str{ "first, second, first, third, one, two" };
+		getFrequencyWordVec(str);
 	}
 
 }

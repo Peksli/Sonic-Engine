@@ -1,4 +1,4 @@
-#include "LogManager/LogManager.h"
+#include "Managers/LogManager/LogManager.h"
 
 
 namespace Sonic

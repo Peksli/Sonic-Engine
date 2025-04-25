@@ -1,7 +1,7 @@
 #pragma once
 
-#include "EventManager\EventManagerMacros.h"
-#include "EventManager\EventBase.h"
+#include "Managers/EventManager/EventManagerMacros.h"
+#include "Managers/EventManager/EventBase.h"
 
 
 namespace Sonic
